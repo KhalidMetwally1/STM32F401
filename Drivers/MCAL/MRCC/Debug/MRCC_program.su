@@ -1,0 +1,3 @@
+../MRCC_program.c:27:6:MRCC_voidInit	4	static
+../MRCC_program.c:137:6:MRCC_voidPrephiralEnable	16	static
+../MRCC_program.c:155:6:MRCC_voidPrephiralDisable	16	static
