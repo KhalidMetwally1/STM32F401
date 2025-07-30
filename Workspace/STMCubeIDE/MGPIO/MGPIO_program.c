@@ -199,9 +199,9 @@ void MGPIO_voidSetAtomicPinValue(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Value)
 	{
 		switch(Copy_u8Port)
 		{
-		case PORTA:
-		case PORTB:
-		case PORTC:
+		case PORTA: GPIOA->BSRR = (1<<Copy_u8Pin); break;
+		case PORTB: GPIOB->BSRR = (1<<Copy_u8Pin); break;
+		case PORTC: GPIOC->BSRR = (1<<Copy_u8Pin); break;
 		}
 	}
 
@@ -209,9 +209,9 @@ void MGPIO_voidSetAtomicPinValue(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Value)
 	{
 		switch(Copy_u8Port)
 		{
-		case PORTA:
-		case PORTB:
-		case PORTC:
+		case PORTA: GPIOA->BSRR = (1<<(Copy_u8Pin+16)); break;
+		case PORTB: GPIOB->BSRR = (1<<(Copy_u8Pin+16)); break;
+		case PORTC: GPIOC->BSRR = (1<<(Copy_u8Pin+16)); break;
 		}
 	}
 }
