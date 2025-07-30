@@ -1,0 +1,19 @@
+/*
+ * MGPIO_config.h
+ *
+ *  Author: Khalid Metwally
+ *   Layer: MCAL
+ *	   SWC: GPIO
+ */
+
+#ifndef MGPIO_CONFIG_H_
+#define MGPIO_CONFIG_H_
+/*==============================================================================================================*/
+/*
+	[PIN VALUE OPTIONS]
+	1. ODR_RG
+	2. BSRR_RG
+ */
+#define  SET_PINVALUE    BSRR_RG
+/*==============================================================================================================*/
+#endif /* MGPIO_CONFIG_H_ */

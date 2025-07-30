@@ -1,0 +1,312 @@
+!SESSION 2025-07-30 00:37:24.405 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-30 00:38:15.222
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-30 00:38:15.224
+!MESSAGE Log4j2 initialized with config file D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-30 00:38:33.500
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:00:44.684
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:00:44.684
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:00:44.684
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:00:44.729
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:00:48.847
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:00:48.847
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:00:48.847
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:00:48.873
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:00:56.724
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:00:56.724
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:00:56.724
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:00:56.748
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:00:57.181
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:00:57.181
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:00:57.181
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:00:57.207
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:00:57.338
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:00:57.338
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:00:57.338
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:00:57.364
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:00:57.517
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:00:57.517
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:00:57.517
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:00:57.541
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:00:57.679
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:00:57.679
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:00:57.680
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:00:57.706
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:00:57.856
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:00:57.856
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:00:57.856
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:00:57.880
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:00:58.029
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:00:58.029
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:00:58.029
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:00:58.053
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:00:58.194
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:00:58.194
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:00:58.194
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:00:58.221
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:00:58.380
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:00:58.381
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:00:58.381
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:00:58.406
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:01:00.424
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:01:00.424
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:01:00.424
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:01:00.447
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:01:00.915
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:01:00.916
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:01:00.916
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:01:00.937
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:01:01.110
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:01:01.110
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:01:01.111
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:01:01.134
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:01:01.291
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:01:01.291
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:01:01.291
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:01:01.314
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:01:01.470
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:01:01.470
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:01:01.470
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:01:01.496
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:01:01.604
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:01:01.604
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:01:01.604
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:01:01.626
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.core.resources 4 77 2025-07-30 01:01:01.773
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-07-30 01:01:01.773
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-07-30 01:01:01.773
+!MESSAGE D:\interfacing_with_ARM\STM32F401\Workspace overlaps the workspace location: D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE
+
+!ENTRY com.st.stm32cube.ide.cmake 4 0 2025-07-30 01:01:01.795
+!MESSAGE Failed to setup project
+!STACK 0
+java.lang.Exception: Project creation failed
+	at com.st.stm32cube.ide.cmake.utils.CMakeUtils$CmakeTemplateSetupTask.run(CMakeUtils.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+!SESSION 2025-07-30 01:42:14.685 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-30 01:42:44.978
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-30 01:42:45.004
+!MESSAGE Log4j2 initialized with config file D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-30 01:43:37.965
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-07-30 17:05:45.975 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-30 17:06:16.021
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-30 17:06:16.039
+!MESSAGE Log4j2 initialized with config file D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-30 17:06:26.603
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2025-07-30 17:08:49.756
+!MESSAGE Failed to get MCU from name "" in toolchain com.st.stm32cube.ide.mcu.gnu.managedbuild.toolchain.exe.debug.407639210
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2025-07-30 17:08:49.814
+!MESSAGE Failed to get MCU from name "" in toolchain com.st.stm32cube.ide.mcu.gnu.managedbuild.toolchain.exe.debug.407639210
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2025-07-30 17:08:49.843
+!MESSAGE Failed to get MCU from name "" in toolchain com.st.stm32cube.ide.mcu.gnu.managedbuild.toolchain.exe.release.1318415787
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2025-07-30 17:08:49.846
+!MESSAGE Failed to get MCU from name "" in toolchain com.st.stm32cube.ide.mcu.gnu.managedbuild.toolchain.exe.release.1318415787
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-30 17:09:03.308
+!MESSAGE Indexed 'MGPIO' (0 sources, 0 headers) in 0.004 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)

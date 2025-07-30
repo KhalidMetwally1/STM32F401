@@ -1,0 +1,328 @@
+/*
+ * MGPIO_program.c
+ *
+ *  Author: Khalid Metwally
+ *   Layer: MCAL
+ *	   SWC: GPIO
+ */
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+
+#include "MGPIO_config.h"
+#include "MGPIO_interface.h"
+#include "MGPIO_private.h"
+/*==============================================================================================================*/
+
+/*
+ * Brief    : This function sets the direction of a specific GPIO pin (Input, Output, Alternate Function, or Analog).
+ * Parameters:
+ *      => Copy_u8Port --> GPIO Port [ PORTA, PORTB, PORTC ]
+ *      => Copy_u8Pin  --> GPIO Pin  [ PIN0 to PIN15 ]
+ *      => Copy_u8Mode --> Pin Mode  [ INPUT, OUTPUT, AF (Alternate Function), ANALOG ]
+ * Return   : void
+ */
+void MGPIO_voidSetPinDirection		(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Mode)
+{
+	switch (Copy_u8Port)
+	{
+		case PORTA:
+			GPIOA->MODER &= ~(3 << (Copy_u8Pin * 2));          	// Clear the desired 2 bits
+			GPIOA->MODER |=  (Copy_u8Mode << (Copy_u8Pin * 2)); // Set new mode
+			break;
+
+		case PORTB:
+			GPIOB->MODER &= ~(3 << (Copy_u8Pin * 2));
+			GPIOB->MODER |=  (Copy_u8Mode << (Copy_u8Pin * 2));
+			break;
+
+		case PORTC:
+			GPIOC->MODER &= ~(3 << (Copy_u8Pin * 2));
+			GPIOC->MODER |=  (Copy_u8Mode << (Copy_u8Pin * 2));
+			break;
+	}
+}
+/*==============================================================================================================*/
+
+/*
+ * Brief    : This function configures the input mode (no pull, pull-up, or pull-down) of a specific GPIO pin.
+ * Parameters:
+ *      => Copy_u8Port      --> GPIO Port 	[ PORTA, PORTB, PORTC ]
+ *      => Copy_u8Pin       --> GPIO Pin  	[ PIN0 to PIN15 ]
+ *      => Copy_u8InputMode --> Input Mode 	[ NO_PULL, PULL_UP, PULL_DOWN ]
+ * Return   : void
+ */
+void MGPIO_voidSetInputConfig	(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8InputMode)
+{
+	switch (Copy_u8Port)
+	{
+		case PORTA:
+			GPIOA->PUPDR &= ~(3 << (Copy_u8Pin * 2));           		// Clear the desired 2 bits
+			GPIOA->PUPDR |=  (Copy_u8InputMode << (Copy_u8Pin * 2)); 	// Set new pull type
+			break;
+
+		case PORTB:
+			GPIOB->PUPDR &= ~(3 << (Copy_u8Pin * 2));
+			GPIOB->PUPDR |=  (Copy_u8InputMode << (Copy_u8Pin * 2));
+			break;
+
+		case PORTC:
+			GPIOC->PUPDR &= ~(3 << (Copy_u8Pin * 2));
+			GPIOC->PUPDR |=  (Copy_u8InputMode << (Copy_u8Pin * 2));
+			break;
+	}
+}
+/*==============================================================================================================*/
+
+/*
+ * Brief    : This function reads the logic level (HIGH or LOW) from a specific GPIO pin.
+ * Parameters:
+ *      => Copy_u8Port --> GPIO Port [ PORTA, PORTB, PORTC ]
+ *      => Copy_u8Pin  --> GPIO Pin  [ PIN0 to PIN15 ]
+ * Return   : u8 --> Pin Value [ MGPIO_LOW, MGPIO_HIGH ]
+ */
+u8	 MGPIO_u8GetPinValue		(u8 Copy_u8Port, u8 Copy_u8Pin)
+{
+	u8 LOC_u8PinValue = 0;
+	switch(Copy_u8Port)
+	{
+		case PORTA: LOC_u8PinValue = GET_BIT(GPIOA->IDR, Copy_u8Pin); break;
+		case PORTB: LOC_u8PinValue = GET_BIT(GPIOB->IDR, Copy_u8Pin); break;
+		case PORTC: LOC_u8PinValue = GET_BIT(GPIOC->IDR, Copy_u8Pin); break;
+	}
+	return LOC_u8PinValue;
+}
+/*==============================================================================================================*/
+
+/*
+ * Brief    : This function configures a GPIO pin as an output with specified type and speed.
+ * Parameters:
+ *      => Copy_u8Port  --> GPIO Port [ PORTA, PORTB, PORTC ]
+ *      => Copy_u8Pin   --> GPIO Pin  [ PIN0 to PIN15 ]
+ *      => Copy_u8Type  --> Output Type [ PUSH_PULL, OPEN_DRAIN ]
+ *      => Copy_u8Speed --> Output Speed [ LOW_SPEED, MEDIUM_SPEED, HIGH_SPEED, VERY_HIGH_SPEED ]
+ * Return   : void
+ */
+void MGPIO_voidSetOutputConfig	(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Type, u8 Copy_u8Speed)
+{
+	if (Copy_u8Type == PUSH_PULL)
+	{
+		switch(Copy_u8Port)
+		{
+			case PORTA:
+				CLR_BIT(GPIOA->OTYPER, Copy_u8Pin); // 0 = Push-Pull
+				/* SPEED MASK*/
+				GPIOA->OSPEEDER &= ~(3 << (Copy_u8Pin * 2));
+				GPIOA->OSPEEDER |=  (Copy_u8Speed << (Copy_u8Pin * 2));
+
+			case PORTB:
+				CLR_BIT(GPIOB->OTYPER, Copy_u8Pin);
+				/* SPEED MASK*/
+				GPIOB->OSPEEDER &= ~(3 << (Copy_u8Pin * 2));
+				GPIOB->OSPEEDER |=  (Copy_u8Speed << (Copy_u8Pin * 2));
+
+			case PORTC:
+				CLR_BIT(GPIOC->OTYPER, Copy_u8Pin);
+				/* SPEED MASK*/
+				GPIOC->OSPEEDER &= ~(3 << (Copy_u8Pin * 2));
+				GPIOC->OSPEEDER |=  (Copy_u8Speed << (Copy_u8Pin * 2));
+		}
+	}
+	else if (Copy_u8Type == OPEN_DRAIN)
+	{
+		switch(Copy_u8Port)
+		{
+			case PORTA:
+				SET_BIT(GPIOA->OTYPER, Copy_u8Pin); // 1 = Open-Drain
+				/* SPEED MASK*/
+				GPIOA->OSPEEDER &= ~(3 << (Copy_u8Pin * 2));
+				GPIOA->OSPEEDER |=  (Copy_u8Speed << (Copy_u8Pin * 2));
+
+			case PORTB:
+				SET_BIT(GPIOB->OTYPER, Copy_u8Pin);
+				/* SPEED MASK*/
+				GPIOB->OSPEEDER &= ~(3 << (Copy_u8Pin * 2));
+				GPIOB->OSPEEDER |=  (Copy_u8Speed << (Copy_u8Pin * 2));
+
+			case PORTC:
+				SET_BIT(GPIOC->OTYPER, Copy_u8Pin);
+				/* SPEED MASK*/
+				GPIOC->OSPEEDER &= ~(3 << (Copy_u8Pin * 2));
+				GPIOC->OSPEEDER |=  (Copy_u8Speed << (Copy_u8Pin * 2));
+		}
+	}
+}
+/*==============================================================================================================*/
+
+/*
+ * Brief    : This function sets the logic level of a GPIO output pin.
+ * Parameters:
+ *      => Copy_u8Port  --> GPIO Port [ PORTA, PORTB, PORTC ]
+ *      => Copy_u8Pin   --> GPIO Pin  [ PIN0 to PIN15 ]
+ *      => Copy_u8Value --> Pin Value [ MGPIO_LOW, MGPIO_HIGH ]
+ * Return   : void
+ */
+void MGPIO_voidSetPinValue		(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Value)
+{
+	if(Copy_u8Value == MGPIO_HIGH)
+	{
+		switch(Copy_u8Port)
+		{
+		case PORTA: SET_BIT(GPIOA->ODR, Copy_u8Pin); break;
+		case PORTB: SET_BIT(GPIOB->ODR, Copy_u8Pin); break;
+		case PORTC: SET_BIT(GPIOC->ODR, Copy_u8Pin); break;
+		}
+	}
+
+	else if (Copy_u8Value == MGPIO_LOW)
+	{
+		switch(Copy_u8Port)
+		{
+		case PORTA: CLR_BIT(GPIOA->ODR, Copy_u8Pin); break;
+		case PORTB: CLR_BIT(GPIOB->ODR, Copy_u8Pin); break;
+		case PORTC: CLR_BIT(GPIOC->ODR, Copy_u8Pin); break;
+		}
+	}
+}
+/*==============================================================================================================*/
+
+/*
+ * Brief    : This function atomically sets or resets the logic level of a GPIO output pin using the BSRR register.
+ * Parameters:
+ *      => Copy_u8Port  --> GPIO Port [ PORTA, PORTB, PORTC ]
+ *      => Copy_u8Pin   --> GPIO Pin  [ PIN0 to PIN15 ]
+ *      => Copy_u8Value --> Pin Value [ MGPIO_LOW, MGPIO_HIGH ]
+ * Return   : void
+ */
+void MGPIO_voidSetAtomicPinValue(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Value)
+{
+	if(Copy_u8Value == MGPIO_HIGH)
+	{
+		switch(Copy_u8Port)
+		{
+		case PORTA:
+		case PORTB:
+		case PORTC:
+		}
+	}
+
+	else if (Copy_u8Value == MGPIO_LOW)
+	{
+		switch(Copy_u8Port)
+		{
+		case PORTA:
+		case PORTB:
+		case PORTC:
+		}
+	}
+}
+/*==================================================[    OLD    ]============================================================*/
+
+void MGPIO_voidSetOutputType(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Type)
+{
+}
+
+void MGPIO_voidSetOutputSpeed(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Speed)
+{
+}
+
+void MGPIO_voidSetPinValue(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Value)
+{
+#if SET_PINVALUE == ODR_RG
+
+
+#elif SET_PINVALUE == BSRR_RG
+	switch(Copy_u8Port)
+	{
+	case PORTA:
+		if(Copy_u8Value == HIGH)
+			BSRR_SET(GPIOA, Copy_u8Pin);
+		else
+			BSRR_RESET(GPIOA, Copy_u8Pin);
+		break;
+
+	case PORTB:
+		if(Copy_u8Value == HIGH)
+			BSRR_SET(GPIOB, Copy_u8Pin);
+		else
+			BSRR_RESET(GPIOB, Copy_u8Pin);
+		break;
+
+	case PORTC:
+		if(Copy_u8Value == HIGH)
+			BSRR_SET(GPIOC, Copy_u8Pin);
+		else
+			BSRR_RESET(GPIOC, Copy_u8Pin);
+		break;
+	}
+#endif
+}
+
+void MGPIO_voidSetPullType(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Pull)
+{
+
+}
+
+
+u8 MGPIO_u8GetPinValue(u8 Copy_u8Port, u8 Copy_u8Pin)
+{
+
+}
+
+void MGPIO_voidConfigAlernateFunc(u8 Copy_u8Port, u8 Copy_u8Pin , u8 Copy_u8Alrtrnate){
+
+	switch (Copy_u8Port)
+	{
+	case PORTA:
+		if (Copy_u8Pin<=7)
+		{
+			GPIOA->AFRL &= ~(15 << (Copy_u8Pin * 4));          // Clear the 4 bits
+			GPIOA->AFRL |=  (Copy_u8Alrtrnate  << (Copy_u8Pin * 4)); // Set new mode
+
+		}
+
+		else if (Copy_u8Pin<=15)
+		{
+			GPIOA->AFRH &= ~(15 << (Copy_u8Pin-8) * 4);          // Clear the 4 bits
+			GPIOA->AFRH |=  (Copy_u8Alrtrnate  << (Copy_u8Pin * 4)); // Set new mode
+
+		}
+
+		break;
+
+	case PORTB:
+		if (Copy_u8Pin<=7)
+				{
+					GPIOB->AFRL &= ~(15 << (Copy_u8Pin * 4));          // Clear the 4 bits
+					GPIOB->AFRL |=  (Copy_u8Alrtrnate  << (Copy_u8Pin * 4)); // Set new mode
+
+				}
+
+		else if (Copy_u8Pin<=15)
+				{
+					GPIOB->AFRH &= ~(15 << (Copy_u8Pin-8) * 4);          // Clear the 4 bits
+					GPIOB->AFRH |=  (Copy_u8Alrtrnate  << (Copy_u8Pin * 4)); // Set new mode
+
+				}
+		break;
+
+	case PORTC:
+		if (Copy_u8Pin<=7)
+				{
+					GPIOC->AFRL &= ~(15 << (Copy_u8Pin * 4));          // Clear the 4 bits
+					GPIOC->AFRL |=  (Copy_u8Alrtrnate  << (Copy_u8Pin * 4)); // Set new mode
+
+				}
+
+		else if (Copy_u8Pin<=15)
+				{
+					GPIOC->AFRH &= ~(15 << (Copy_u8Pin-8) *4 );          // Clear the 4 bits
+					GPIOC->AFRH |=  (Copy_u8Alrtrnate  << (Copy_u8Pin * 4)); // Set new mode
+
+				}
+		break;
+
+	default:
+
+		break;
+	}
+}
