@@ -12,7 +12,6 @@
 #include "MGPIO_interface.h"
 #include "MGPIO_private.h"
 /*==============================================================================================================*/
-
 /*
  * Brief    : This function sets the direction of a specific GPIO pin (Input, Output, Alternate Function, or Analog).
  * Parameters:
@@ -42,7 +41,178 @@ void MGPIO_voidSetPinDirection		(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Mode)
 	}
 }
 /*==============================================================================================================*/
+/*
+ * Brief    : This function sets the direction of the hole section of GPIO port (Input, Output, Alternate Function, or Analog).
+ * Parameters:
+ *      => Copy_u8Port --> GPIO Port 				[ PORTA, PORTB, PORTC ]
+ *      => Copy_u8Section  --> GPIO Port Section  	[ LSPART to MSPART ]
+ *      => Copy_u8Mode --> Pin Mode  				[ INPUT, OUTPUT, AF (Alternate Function), ANALOG ]
+ * Return   : void
+ */
+void MGPIO_voidSetPortDirection	(u8 Copy_u8Port,u8 Copy_u8Section, u8 Copy_u8Mode){
+	/* INPUT (0b0000) = (0x0) */
+	if (Copy_u8Mode == INPUT)
+	{
+		if (Copy_u8Section == LSPART)
+		{
+			switch (Copy_u8Port)
+			{
+				case PORTA:
+					GPIOA->MODER &= (0xFFFF0000);
+					GPIOA->MODER |= (0x00000000);
+					break;
+				case PORTB:
+					GPIOB->MODER &= (0xFFFF0000);
+					GPIOB->MODER |= (0x00000000);
+					break;
+				case PORTC:
+					GPIOC->MODER &= (0xFFFF0000);
+					GPIOC->MODER |= (0x00000000);
+					break;
+			}
+		}
+		else if (Copy_u8Section == MSPART)
+		{
+			switch (Copy_u8Port)
+			{
+				case PORTA:
+					GPIOA->MODER &= (0x0000FFFF);
+					GPIOA->MODER |= (0x00000000);
+					break;
+				case PORTB:
+					GPIOA->MODER &= (0x0000FFFF);
+					GPIOA->MODER |= (0x00000000);
+					break;
+				case PORTC:
+					GPIOA->MODER &= (0x0000FFFF);
+					GPIOA->MODER |= (0x00000000);
+					break;
+			}
+		}
 
+	}
+	/* OUTPUT (0b0101) = (0x5) */
+	else if (Copy_u8Mode == OUTPUT)
+	{
+		if (Copy_u8Section == LSPART)
+		{
+			switch (Copy_u8Port)
+			{
+				case PORTA:
+					GPIOA->MODER &= (0xFFFF0000);
+					GPIOA->MODER |= (0x00005555);
+					break;
+				case PORTB:
+					GPIOB->MODER &= (0xFFFF0000);
+					GPIOB->MODER |= (0x00005555);
+					break;
+				case PORTC:
+					GPIOC->MODER &= (0xFFFF0000);
+					GPIOC->MODER |= (0x00005555);
+					break;
+			}
+		}
+		else if (Copy_u8Section == MSPART)
+		{
+			switch (Copy_u8Port)
+			{
+				case PORTA:
+					GPIOA->MODER &= (0x0000FFFF);
+					GPIOA->MODER |= (0x55550000);
+					break;
+				case PORTB:
+					GPIOA->MODER &= (0x0000FFFF);
+					GPIOA->MODER |= (0x55550000);
+					break;
+				case PORTC:
+					GPIOA->MODER &= (0x0000FFFF);
+					GPIOA->MODER |= (0x55550000);
+					break;
+			}
+		}
+	}
+	/* AF (0b1010) = (0xA) */
+	else if (Copy_u8Mode == AF)
+	{
+		if (Copy_u8Section == LSPART)
+		{
+			switch (Copy_u8Port)
+			{
+				case PORTA:
+					GPIOA->MODER &= (0xFFFF0000);
+					GPIOA->MODER |= (0x0000AAAA);
+					break;
+				case PORTB:
+					GPIOB->MODER &= (0xFFFF0000);
+					GPIOB->MODER |= (0x0000AAAA);
+					break;
+				case PORTC:
+					GPIOC->MODER &= (0xFFFF0000);
+					GPIOC->MODER |= (0x0000AAAA);
+					break;
+			}
+		}
+		else if (Copy_u8Section == MSPART)
+		{
+			switch (Copy_u8Port)
+			{
+				case PORTA:
+					GPIOA->MODER &= (0x0000FFFF);
+					GPIOA->MODER |= (0xAAAA0000);
+					break;
+				case PORTB:
+					GPIOA->MODER &= (0x0000FFFF);
+					GPIOA->MODER |= (0xAAAA0000);
+					break;
+				case PORTC:
+					GPIOA->MODER &= (0x0000FFFF);
+					GPIOA->MODER |= (0xAAAA0000);
+					break;
+			}
+		}
+	}
+	/* ANALOG (0b1111) = (0xF) */
+	else if (Copy_u8Mode == AF)
+	{
+		if (Copy_u8Section == LSPART)
+		{
+			switch (Copy_u8Port)
+			{
+				case PORTA:
+					GPIOA->MODER &= (0xFFFF0000);
+					GPIOA->MODER |= (0x0000FFFF);
+					break;
+				case PORTB:
+					GPIOB->MODER &= (0xFFFF0000);
+					GPIOB->MODER |= (0x0000FFFF);
+					break;
+				case PORTC:
+					GPIOC->MODER &= (0xFFFF0000);
+					GPIOC->MODER |= (0x0000FFFF);
+					break;
+			}
+		}
+		else if (Copy_u8Section == MSPART)
+		{
+			switch (Copy_u8Port)
+			{
+				case PORTA:
+					GPIOA->MODER &= (0x0000FFFF);
+					GPIOA->MODER |= (0xFFFF0000);
+					break;
+				case PORTB:
+					GPIOA->MODER &= (0x0000FFFF);
+					GPIOA->MODER |= (0xFFFF0000);
+					break;
+				case PORTC:
+					GPIOA->MODER &= (0x0000FFFF);
+					GPIOA->MODER |= (0xFFFF0000);
+					break;
+			}
+		}
+	}
+}
+/*==============================================================================================================*/
 /*
  * Brief    : This function configures the input mode (no pull, pull-up, or pull-down) of a specific GPIO pin.
  * Parameters:
@@ -72,7 +242,6 @@ void MGPIO_voidSetInputConfig	(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8InputMod
 	}
 }
 /*==============================================================================================================*/
-
 /*
  * Brief    : This function reads the logic level (HIGH or LOW) from a specific GPIO pin.
  * Parameters:
@@ -92,7 +261,6 @@ u8	 MGPIO_u8GetPinValue		(u8 Copy_u8Port, u8 Copy_u8Pin)
 	return LOC_u8PinValue;
 }
 /*==============================================================================================================*/
-
 /*
  * Brief    : This function configures a GPIO pin as an output with specified type and speed.
  * Parameters:
@@ -152,7 +320,6 @@ void MGPIO_voidSetOutputConfig	(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Type, u
 	}
 }
 /*==============================================================================================================*/
-
 /*
  * Brief    : This function sets the logic level of a GPIO output pin.
  * Parameters:
@@ -184,7 +351,99 @@ void MGPIO_voidSetPinValue		(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Value)
 	}
 }
 /*==============================================================================================================*/
+/*
+ * Brief    : This function sets the logic level of the hole section of GPIO output port.
+ * Parameters:
+ *      => Copy_u8Port  --> GPIO Port 				[ PORTA, PORTB, PORTC ]
+ *      => Copy_u8Section  --> GPIO Port Section  	[ LSPART to MSPART ]
+ *      => Copy_u8Value --> Pin Value 				[ MGPIO_LOW, MGPIO_HIGH ]
+ * Return   : void
+ */
+void MGPIO_voidSetPortValue		(u8 Copy_u8Port, u8 Copy_u8Section, u8 Copy_u8Value)
+{
+	if (Copy_u8Section == LSPART)
+	{
+		if(Copy_u8Value == MGPIO_HIGH)
+		{
+			switch(Copy_u8Port)
+			{
+			case PORTA:
+				GPIOA->ODR &= (0xFFFFFF00);
+				GPIOA->ODR |= (0x000000FF);
+				break;
+			case PORTB:
+				GPIOB->ODR &= (0xFFFFFF00);
+				GPIOB->ODR |= (0x000000FF);
+				break;
+			case PORTC:
+				GPIOC->ODR &= (0xFFFFFF00);
+				GPIOC->ODR |= (0x000000FF);
+				break;
+			}
+		}
 
+		else if (Copy_u8Value == MGPIO_LOW)
+		{
+			switch(Copy_u8Port)
+			{
+			case PORTA:
+				GPIOA->ODR &= (0xFFFFFF00);
+				GPIOA->ODR |= (0x00000000);
+				break;
+			case PORTB:
+				GPIOB->ODR &= (0xFFFFFF00);
+				GPIOB->ODR |= (0x00000000);
+				break;
+			case PORTC:
+				GPIOC->ODR &= (0xFFFFFF00);
+				GPIOC->ODR |= (0x00000000);
+				break;
+			}
+		}
+	}
+
+	else if (Copy_u8Section == MSPART)
+	{
+		if(Copy_u8Value == MGPIO_HIGH)
+		{
+			switch(Copy_u8Port)
+			{
+			case PORTA:
+				GPIOA->ODR &= (0xFFFF00FF);
+				GPIOA->ODR |= (0x0000FF00);
+				break;
+			case PORTB:
+				GPIOB->ODR &= (0xFFFF00FF);
+				GPIOB->ODR |= (0x0000FF00);
+				break;
+			case PORTC:
+				GPIOC->ODR &= (0xFFFF00FF);
+				GPIOC->ODR |= (0x0000FF00);
+				break;
+			}
+		}
+
+		else if (Copy_u8Value == MGPIO_LOW)
+		{
+			switch(Copy_u8Port)
+			{
+			case PORTA:
+				GPIOA->ODR &= (0xFFFF00FF);
+				GPIOA->ODR |= (0x00000000);
+				break;
+			case PORTB:
+				GPIOB->ODR &= (0xFFFF00FF);
+				GPIOB->ODR |= (0x00000000);
+				break;
+			case PORTC:
+				GPIOC->ODR &= (0xFFFF00FF);
+				GPIOC->ODR |= (0x00000000);
+				break;
+			}
+		}
+	}
+}
+/*==============================================================================================================*/
 /*
  * Brief    : This function atomically sets or resets the logic level of a GPIO output pin using the BSRR register.
  * Parameters:

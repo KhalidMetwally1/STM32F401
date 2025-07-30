@@ -16,6 +16,11 @@
 #define PORTC    2
 /*==============================================================================================================*/
 
+/* Port Sections */
+#define LSPART	0 /* Lease Significant Port */
+#define MSPART	1 /* Most Significant Port */
+/*==============================================================================================================*/
+
 /* Pins */
 #define PIN0     0
 #define PIN1     1
@@ -86,6 +91,7 @@
 /*==============================================================================================================*/
 
 void MGPIO_voidSetPinDirection	(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Mode);
+void MGPIO_voidSetPortDirection	(u8 Copy_u8Port, u8 Copy_u8Section, u8 Copy_u8Mode);
 /* INPUT APIs */
 void MGPIO_voidSetInputConfig	(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8InputMode);
 u8	 MGPIO_u8GetPinValue		(u8 Copy_u8Port, u8 Copy_u8Pin);
@@ -93,7 +99,9 @@ u8	 MGPIO_u8GetPinValue		(u8 Copy_u8Port, u8 Copy_u8Pin);
 /* OUTPUT APIs */
 void MGPIO_voidSetOutputConfig	(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Type, u8 Copy_u8Speed);
 void MGPIO_voidSetPinValue		(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Value);
+void MGPIO_voidSetPortValue		(u8 Copy_u8Port, u8 Copy_u8Section, u8 Copy_u8Value);
 void MGPIO_voidSetAtomicPinValue(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Value);
+
 /* Alternate Function*/
 void MGPIO_voidConfigAlterFunc	(u8 Copy_u8Port, u8 Copy_u8Pin , u8 Copy_u8AlterFunc);
 /*==============================================================================================================*/

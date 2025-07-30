@@ -1,6 +1,6 @@
-19:56:32 **** Build of configuration Debug for project SYSTICK ****
+20:54:40 **** Incremental Build of configuration Debug for project MGPIO ****
 make all 
-arm-none-eabi-gcc "../SYSTICK_program.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"SYSTICK_program.d" -MT"SYSTICK_program.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "SYSTICK_program.o"
+arm-none-eabi-gcc "../MGPIO_program.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"MGPIO_program.d" -MT"MGPIO_program.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "MGPIO_program.o"
 Error: Cannot find the specified linker script. Check the linker settings in the build configuration.
 make: *** [makefile:85: fail-specified-linker-script-missing] Error 2
 "make all" terminated with exit code 2. Build might be incomplete.
