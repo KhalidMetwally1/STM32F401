@@ -1,0 +1,28 @@
+/*
+ * SYSTICK_interface.h
+ *
+ *  Author: Khalid Metwally
+ *   Layer: Core Peripheral
+ *	   SWC: SYSTICK
+ */
+#ifndef SYSTICK_INTERFACE_H_
+#define SYSTICK_INTERFACE_H_
+/*==============================================================================================================*/
+
+/* INTERRUPT STATE */
+#define INT_DISABLE	0
+#define INT_ENABLE	1
+/*==============================================================================================================*/
+
+/* APIs */
+void SYSTICK_voidInit(void);
+void SYSTICK_voidConfigureInterruptState(u8 Copy_u8State);
+void SYSTICK_voidStart(u32 Copy_u32TicksValue);
+
+void SYSTICK_voidDelay_ms(u32 Copy_u32DelayTime);
+void SYSTICK_voidDelay_us(u32 Copy_u32DelayTime);
+
+u32	 SYSTICK_u32GetElapsedTime(void);
+u32	 SYSTICK_u32GetRemainingTime(void);
+/*==============================================================================================================*/
+#endif /* SYSTICK_INTERFACE_H_ */

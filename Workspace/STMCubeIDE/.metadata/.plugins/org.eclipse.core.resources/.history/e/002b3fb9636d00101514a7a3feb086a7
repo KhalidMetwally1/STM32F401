@@ -1,0 +1,11 @@
+/*
+ * SYSTICK_config.h
+ *
+ *  Author: Khalid Metwally
+ *   Layer: Core Peripheral
+ *	   SWC: SYSTICK
+ */
+#ifndef SYSTICK_CONFIG_H_
+#define SYSTICK_CONFIG_H_
+
+#endif /* SYSTICK_CONFIG_H_ */

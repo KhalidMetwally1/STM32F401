@@ -1,0 +1,19 @@
+/*
+ * SYSTICK_config.h
+ *
+ *  Author: Khalid Metwally
+ *   Layer: Core Peripheral
+ *	   SWC: SYSTICK
+ */
+#ifndef SYSTICK_CONFIG_H_
+#define SYSTICK_CONFIG_H_
+/*==============================================================================================================*/
+
+/*
+	[SYSTICK CLOCK SOURCE OPTIONS]
+	1. AHB_Diveded_By_8
+	2. AHB_CLOCK_SOURCE
+ */
+#define SYSTICK_CLOCK_SOURCE		AHB_Diveded_By_8
+/*==============================================================================================================*/
+#endif /* SYSTICK_CONFIG_H_ */

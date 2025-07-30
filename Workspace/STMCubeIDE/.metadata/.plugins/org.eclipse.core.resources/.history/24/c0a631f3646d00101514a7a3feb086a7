@@ -1,0 +1,68 @@
+/*
+ * SYSTICK_program.c
+ *
+ *  Author: Khalid Metwally
+ *   Layer: Core Peripheral
+ *	   SWC: SYSTICK
+ */
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+
+#include "SYSTICK_interface.h"
+#include "SYSTICK_config.h"
+#include "SYSTICK_private.h"
+/*==============================================================================================================*/
+/*
+ * Brief    : Initializes the SysTick timer with default settings (processor clock, no interrupt).
+ * Parameters: void
+ * Return   : void
+ */
+void SYSTICK_voidInit(void);
+/*==============================================================================================================*/
+/*
+ * Brief    : Configures whether the SysTick timer will generate an interrupt on countdown completion.
+ * Parameters:
+ *      => Copy_uddtState --> Interrupt State [ INT_ENABLE, INT_DISABLE ]
+ * Return   : void
+ */
+void SYSTICK_voidConfigureInterruptState(u8 Copy_uddtState);
+/*==============================================================================================================*/
+/*
+ * Brief    : Starts the SysTick timer with a specified number of ticks.
+ * Parameters:
+ *      => Copy_u32TicksValue --> Number of ticks before the timer expires (max 24-bit value).
+ * Return   : void
+ */
+void SYSTICK_voidStart(u32 Copy_u32TicksValue);
+/*==============================================================================================================*/
+/*
+ * Brief    : Creates a blocking delay in milliseconds using the SysTick timer.
+ * Parameters:
+ *      => Copy_u32DelayTime --> Delay time in milliseconds
+ * Return   : void
+ */
+void SYSTICK_voidDelay_ms(u32 Copy_u32DelayTime);
+/*==============================================================================================================*/
+/*
+ * Brief    : Creates a blocking delay in microseconds using the SysTick timer.
+ * Parameters:
+ *      => Copy_u32DelayTime --> Delay time in microseconds
+ * Return   : void
+ */
+void SYSTICK_voidDelay_us(u32 Copy_u32DelayTime);
+/*==============================================================================================================*/
+/*
+ * Brief    : Returns the number of ticks that have elapsed since the timer started.
+ * Parameters: void
+ * Return   : u32 --> Elapsed tick count
+ */
+u32	 SYSTICK_u32GetElapsedTime(void);
+/*==============================================================================================================*/
+/*
+ * Brief    : Returns the number of ticks remaining before the timer expires.
+ * Parameters: void
+ * Return   : u32 --> Remaining tick count
+ */
+u32	 SYSTICK_u32GetRemainingTime(void);
+/*==============================================================================================================*/
+

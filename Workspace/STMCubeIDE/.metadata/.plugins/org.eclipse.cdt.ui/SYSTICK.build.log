@@ -4,3 +4,6 @@ arm-none-eabi-gcc "../SYSTICK_program.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -
 Error: Cannot find the specified linker script. Check the linker settings in the build configuration.
 make: *** [makefile:85: fail-specified-linker-script-missing] Error 2
 "make all" terminated with exit code 2. Build might be incomplete.
+
+19:56:39 Build Failed. 2 errors, 0 warnings. (took 6s.918ms)
+
