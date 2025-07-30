@@ -1,0 +1,18 @@
+/*
+ * HSSD_program.c
+ *
+ *  Author: Khalid Metwally
+ *   Layer: HAL
+ *	   SWC: HSSD
+ */
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+/* MCAL */
+#include "MGPIO_interface.h"
+/* HAL */
+#include "HSSD_interface.h"
+#include "HSSD_config.h"
+#include "HSSD_private.h"
+
+static u8 Local_u8SSDNumbers[10] = SSD_NUMBER_ARR ;
+/*==============================================================================================================*/

@@ -1,7 +1,0 @@
-../SYSTICK_program.c:20:6:SYSTICK_voidInit	4	static
-../SYSTICK_program.c:39:6:SYSTICK_voidConfigureInterruptState	16	static
-../SYSTICK_program.c:57:6:SYSTICK_voidStart	16	static
-../SYSTICK_program.c:70:6:SYSTICK_voidDelay_ms	16	static
-../SYSTICK_program.c:86:6:SYSTICK_voidDelay_us	16	static
-../SYSTICK_program.c:101:6:SYSTICK_u32GetElapsedTime	4	static
-../SYSTICK_program.c:111:6:SYSTICK_u32GetRemainingTime	4	static

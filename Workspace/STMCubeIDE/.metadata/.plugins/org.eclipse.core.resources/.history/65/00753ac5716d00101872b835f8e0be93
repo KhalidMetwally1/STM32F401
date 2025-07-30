@@ -1,0 +1,14 @@
+/*
+ * HSSD_config.h
+ *
+ *  Author: Khalid Metwally
+ *      Layer: MCAL / HAL
+ *		  SWC:
+ */
+
+#ifndef HSSD_CONFIG_H_
+#define HSSD_CONFIG_H_
+
+
+
+#endif /* HSSD_CONFIG_H_ */

@@ -1,9 +1,0 @@
-../MGPIO_program.c:23:6:MGPIO_voidSetPinDirection	5
-../MGPIO_program.c:52:6:MGPIO_voidSetPortDirection	45
-../MGPIO_program.c:224:6:MGPIO_voidSetInputConfig	5
-../MGPIO_program.c:252:5:MGPIO_u8GetPinValue	5
-../MGPIO_program.c:273:6:MGPIO_voidSetOutputConfig	11
-../MGPIO_program.c:331:6:MGPIO_voidSetPinValue	11
-../MGPIO_program.c:362:6:MGPIO_voidSetPortValue	23
-../MGPIO_program.c:455:6:MGPIO_voidSetAtomicPinValue	11
-../MGPIO_program.c:486:6:MGPIO_voidConfigAlterFunc	12

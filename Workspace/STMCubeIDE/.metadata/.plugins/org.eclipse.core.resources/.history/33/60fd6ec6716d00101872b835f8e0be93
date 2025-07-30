@@ -1,0 +1,15 @@
+/*
+ * HSSD_program.c
+ *
+ *  Author: Khalid Metwally
+ *      Layer: MCAL / HAL
+ *		  SWC:
+ */
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+/* MCAL */
+#include "MGPIO_interface.h"
+/* HAL */
+#include "HSSD_interface.h"
+#include "HSSD_config.h"
+#include "HSSD_private.h"

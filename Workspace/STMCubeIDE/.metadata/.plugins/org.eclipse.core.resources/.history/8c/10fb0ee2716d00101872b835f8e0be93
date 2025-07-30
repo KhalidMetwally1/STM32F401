@@ -1,0 +1,14 @@
+/*
+ * HSSD_private.h
+ *
+ *  Author: Khalid Metwally
+ *      Layer: HAL
+ *		  SWC: HSSD
+ */
+
+#ifndef HSSD_PRIVATE_H_
+#define HSSD_PRIVATE_H_
+
+
+
+#endif /* HSSD_PRIVATE_H_ */

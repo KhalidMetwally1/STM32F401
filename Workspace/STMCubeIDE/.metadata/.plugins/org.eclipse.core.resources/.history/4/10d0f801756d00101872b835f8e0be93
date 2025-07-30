@@ -1,0 +1,34 @@
+/*
+ * HSSD_program.c
+ *
+ *  Author: Khalid Metwally
+ *   Layer: HAL
+ *	   SWC: HSSD
+ */
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+/* MCAL */
+#include "MGPIO_interface.h"
+/* HAL */
+#include "HSSD_interface.h"
+#include "HSSD_config.h"
+#include "HSSD_private.h"
+
+static u8 Local_u8SSDNumbers[10] = SSD_NUMBER_ARR ;
+/*==============================================================================================================*/
+/*
+ * Brief : This Function initialize the port which connected to 7 Segment as output pins ( 8 Pins )
+ * Parameters :
+            =>Copy_u8PORT --> Port Name [ SSD_PORTA ,	SSD_PORTB , SSD_PORTC ]
+ * return : void
+ */
+void SSD_voidInitialDataPort  ( SSD_Type Copy_SSDConfig )
+{
+	MGPIO_voidSetPortDirection		(Copy_SSDConfig.DataPort, Copy_SSDConfig.DataSection, OUTPUT);
+	MGPIO_voidSetOutputPortConfig	(Copy_SSDConfig.DataPort, Copy_SSDConfig.DataSection, Copy_SSDConfig.OutputType, Copy_SSDConfig.Speed);
+}
+/*==============================================================================================================*/
+
+void SSD_voidEnable           ( SSD_Type Copy_SSDConfig );
+void SSD_voidDisable          ( SSD_Type Copy_SSDConfig );
+void SSD_voidSendNumber       ( SSD_Type Copy_SSDConfig , u8 Copy_u8Number );

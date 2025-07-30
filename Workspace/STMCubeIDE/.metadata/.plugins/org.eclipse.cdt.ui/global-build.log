@@ -1,5 +1,6 @@
-20:54:40 **** Incremental Build of configuration Debug for project MGPIO ****
+22:16:54 **** Build of configuration Debug for project HSSD ****
 make all 
+arm-none-eabi-gcc "../HSSD_program.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"HSSD_program.d" -MT"HSSD_program.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HSSD_program.o"
 arm-none-eabi-gcc "../MGPIO_program.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"MGPIO_program.d" -MT"MGPIO_program.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "MGPIO_program.o"
 Error: Cannot find the specified linker script. Check the linker settings in the build configuration.
 make: *** [makefile:85: fail-specified-linker-script-missing] Error 2

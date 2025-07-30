@@ -1,0 +1,14 @@
+/*
+ * HSSD_interface.h
+ *
+ *  Author: Khalid Metwally
+ *      Layer: MCAL / HAL
+ *		  SWC:
+ */
+
+#ifndef HSSD_INTERFACE_H_
+#define HSSD_INTERFACE_H_
+
+
+
+#endif /* HSSD_INTERFACE_H_ */

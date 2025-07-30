@@ -1,0 +1,4 @@
+../HSSD_program.c:25:6:SSD_voidInitialDataPort	16	static
+../HSSD_program.c:38:6:SSD_voidSendNumber	24	static
+../HSSD_program.c:56:6:SSD_voidEnable	16	static
+../HSSD_program.c:76:6:SSD_voidDisable	16	static

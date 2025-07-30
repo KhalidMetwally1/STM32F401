@@ -1,0 +1,25 @@
+/*
+ * HSSD_private.h
+ *
+ *  Author: Khalid Metwally
+ *   Layer: HAL
+ *	   SWC: HSSD
+ */
+
+#ifndef HSSD_PRIVATE_H_
+#define HSSD_PRIVATE_H_
+
+#define SSD_NUMBER_ARR	{0x0000003F , 0x00000006 , 0x0000005B , 0x0000004F , 0x00000066 , 0x0000006D , 0x0000007D , 0x00000007 , 0x0000007F , 0x0000006F}
+/*
+ * 0: 0b00111111 : 0x3F
+ * 1: 0b00000110 : 0x06
+ * 2: 0b01011011 : 0x5B
+ * 3: 0b01001111 : 0x4F
+ * 4: 0b01100110 : 0x66
+ * 5: 0b01101101 : 0x6D
+ * 6: 0b01111101 : 0x7D
+ * 7: 0b00000111 : 0x07
+ * 8: 0b01111111 : 0x7F
+ * 9: 0b01101111 : 0x6F
+*/
+#endif /* HSSD_PRIVATE_H_ */

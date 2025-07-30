@@ -378,3 +378,33 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\interfacing_with_AR
 
 !ENTRY org.eclipse.cdt.core 1 0 2025-07-30 20:03:39.053
 !MESSAGE Indexed 'MGPIO' (1 sources, 5 headers) in 0.315 sec: 83 declarations; 446 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2025-07-30 21:01:27.357 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-30 21:01:45.007
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-30 21:01:45.009
+!MESSAGE Log4j2 initialized with config file D:\interfacing_with_ARM\STM32F401\Workspace\STMCubeIDE\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-30 21:02:00.570
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2025-07-30 21:12:07.387
+!MESSAGE Failed to get MCU from name "" in toolchain com.st.stm32cube.ide.mcu.gnu.managedbuild.toolchain.exe.debug.2119995425
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2025-07-30 21:12:07.389
+!MESSAGE Failed to get MCU from name "" in toolchain com.st.stm32cube.ide.mcu.gnu.managedbuild.toolchain.exe.debug.2119995425
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2025-07-30 21:12:07.396
+!MESSAGE Failed to get MCU from name "" in toolchain com.st.stm32cube.ide.mcu.gnu.managedbuild.toolchain.exe.release.647226898
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2025-07-30 21:12:07.398
+!MESSAGE Failed to get MCU from name "" in toolchain com.st.stm32cube.ide.mcu.gnu.managedbuild.toolchain.exe.release.647226898
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-30 21:12:09.462
+!MESSAGE Indexed 'HSSD' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
